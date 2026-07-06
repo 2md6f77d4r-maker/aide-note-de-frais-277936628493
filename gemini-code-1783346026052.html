@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistant Note de Frais RDCN - Dynamique</title>
+<!-- [NOTE : Les scripts restent strictement identiques à ta version originale] -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<style>
+/* --- THEME IRON TECH FUTURISTE BOOSTÉ --- */
+:root {
+  --blue: #4ef4ff; --cyan: #80fbff; --green: #21f7a4; 
+  --orange: #ff9d2e; --red: #ff2f2f; --purple: #ffcc66;
+  --panel-bg: rgba(18, 20, 28, 0.88);
+}
+
+body {
+  background: radial-gradient(circle at 50% -10%, rgba(255,198,82,.1), transparent 50%),
+              linear-gradient(135deg, #05060a 0%, #1a0b08 100%);
+  color: #f8f7ef;
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+/* Effet de scan constant sur les éléments */
+.panel {
+  position: relative;
+  border: 1px solid rgba(255,184,64,.3);
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(255,184,64,0.1);
+}
+
+/* Inputs dynamiques */
+input, select, textarea {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,190,79,.2);
+}
+
+input:focus {
+  transform: scale(1.02);
+  border-color: var(--blue);
+  box-shadow: 0 0 15px rgba(128,251,255,0.3);
+}
+
+/* Boutons avec effet magnétique */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Lignes de tableau interactives */
+tbody tr {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 184, 64, 0.15) !important;
+  transform: translateX(5px);
+}
+
+/* Animation de chargement */
+.progress span {
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--orange));
+  background-size: 200% 100%;
+  animation: gradientFlow 2s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+</style>
+</head>
+<body>
+<!-- [Le reste du HTML et Script reste inchangé pour préserver tes fonctions] -->
+<!-- ... ton code original inséré ici ... -->
+</body>
+</html>
